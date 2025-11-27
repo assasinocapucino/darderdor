@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Proposal Lucu Pacaran</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(120deg, #ffd6e0 0%, #ffe6f0 100%);
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+        }
+        h1 {
+            color: #e75480;
+        }
+        #btn_mau, #btn_gamau {
+            font-size: 1.2em;
+            padding: 10px 30px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            margin: 7px;
+            transition: box-shadow 0.2s;
+            box-shadow: 0 4px 18px #e7548050;
+        }
+        #btn_mau {
+            background: #e75480;
+            color: white;
+        }
+        #btn_gamau {
+            background: #fff;
+            color: #e75480;
+            position: absolute;
+        }
+        img {
+            width: 130px;
+            margin: 15px auto 20px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hai Cantik!</h1>
+    <img src="https://c.tenor.com/Z8ezUHZzcLoAAAAC/love.gif" alt="Love Gif" />
+    <h1>Maukah kamu menjadi pacarku?</h1>
+    <button id="btn_mau" onclick="alert('I LOVE YOU 💖')">Mau</button>
+    <button id="btn_gamau" onclick="gamau(this)">Gamau</button>
+
+    <script>
+        function gamau(id) {
+            var i = Math.floor(Math.random() * (window.innerWidth - 120));
+            var j = Math.floor(Math.random() * (window.innerHeight - 55));
+            id.style.left = i + "px";
+            id.style.top = j + "px";
+        }
+        // Awal posisi tombol gamau
+        window.onload = function() {
+            var gamauBtn = document.getElementById('btn_gamau');
+            gamauBtn.style.left = "54%";
+            gamauBtn.style.top = "56%";
+        }
+    </script>
+</body>
+</html>
